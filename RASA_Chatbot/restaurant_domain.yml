@@ -1,0 +1,122 @@
+slots:
+  location:
+    type: text
+  cuisine:
+    type: text
+  price:
+    type: text
+  email:
+    type: text
+  results:
+    type: text
+
+entities:
+- location
+- cuisine
+- price
+- email
+- results
+
+intents:
+ - greet
+ - affirm
+ - deny
+ - goodbye
+ - thankyou
+ - restaurant_search
+ - inform
+ - chitchat
+ - option
+ - stop
+
+
+templates:
+  utter_greet:
+    - "Hi, How can I help you!"
+  utter_ask_location:
+    - "In which city are you looking for restaurants"
+  utter_goodbye:
+    - "goodbye :("
+    - "Bye-bye"
+  utter_default:
+    - "default message"
+  utter_ask_cuisine: 
+    - text: "What kind of cuisine would you like?"
+      buttons:
+      - title: "Chinese"
+        payload: "Chinese"
+      - title: "Mexican"
+        payload: "Mexican"
+      - title: "Italian"
+        payload: "Italian"
+      - title: "American"
+        payload: "Italian"
+      - title: "South Indian"
+        payload: "South Indian"
+      - title: "North Indian"
+        payload: "North Indian"
+  utter_ask_price: 
+    - text: "What price range are you looking at?"
+      buttons:
+      - title: "Lesser than Rs. 300"
+        payload: "Lesser than Rs. 300"
+      - title: "Rs. 300 to 700"
+        payload: "Rs. 300 to 700"
+      - title: "More than 700"
+        payload: "More than 700"
+  utter_location_double_check:
+    - "Can you confirm the location again please"
+  utter_location_not_served:
+    - "We do not operate in that area yet.Do you like to search for another location?"
+  utter_cuisine_not_avilable:
+    - "Cuisine not available. Select from the available ones"
+  utter_price_not_in_range:
+    - "Select from the available prices"
+  utter_require_email:
+    - "Do you wish to get the details of restaurants over email?"
+  utter_ask_service:
+    - "Do you want to enquire about restaurants?"
+  utter_ask_continue:
+    - "Do you wish to continue?"
+  utter_ask_email:
+    - "Please provide your email address"
+  utter_bonappetitmail:
+    - "Sent.Bon Appetit!"
+  utter_bonappetitnomail:
+    - "Okay.Bon Appetit!"
+  utter_chitchat:
+    - "I am not able to find the information you are looking for"
+  utter_noresults:
+    - "No results found based on cuisine and price.You can change cuisine and price to see available options"
+  utter_usetext:
+    - "Please provide the input in text"
+
+
+actions:
+- utter_greet
+- utter_ask_location
+- utter_goodbye
+- utter_default
+- utter_ask_cuisine
+- utter_ask_price
+- utter_location_not_served
+- utter_location_double_check
+- utter_cuisine_not_avilable
+- utter_price_not_in_range
+- utter_require_email
+- utter_ask_continue
+- utter_ask_email
+- utter_ask_service
+- utter_bonappetitmail
+- utter_bonappetitnomail
+- utter_chitchat
+- utter_noresults
+- utter_usetext
+- actions.ActionSearchRestaurants
+- actions.CheckCity
+- actions.CheckCusine
+- actions.CheckPrices
+- actions.CheckLocationCusine
+- actions.CheckEmail
+- actions.SendEmail
+- actions.RestartAction

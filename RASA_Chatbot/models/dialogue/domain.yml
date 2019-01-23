@@ -1,0 +1,153 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_ask_location
+- utter_goodbye
+- utter_default
+- utter_ask_cuisine
+- utter_ask_price
+- utter_location_not_served
+- utter_location_double_check
+- utter_cuisine_not_avilable
+- utter_price_not_in_range
+- utter_require_email
+- utter_ask_continue
+- utter_ask_email
+- utter_ask_service
+- utter_bonappetitmail
+- utter_bonappetitnomail
+- utter_chitchat
+- utter_noresults
+- utter_usetext
+- action_restaurant
+- check_location
+- check_cuisine
+- check_price
+- check_location_cuisine
+- check_email_id
+- send_email
+- resetbot
+actions:
+- utter_greet
+- utter_ask_location
+- utter_goodbye
+- utter_default
+- utter_ask_cuisine
+- utter_ask_price
+- utter_location_not_served
+- utter_location_double_check
+- utter_cuisine_not_avilable
+- utter_price_not_in_range
+- utter_require_email
+- utter_ask_continue
+- utter_ask_email
+- utter_ask_service
+- utter_bonappetitmail
+- utter_bonappetitnomail
+- utter_chitchat
+- utter_noresults
+- utter_usetext
+- actions.ActionSearchRestaurants
+- actions.CheckCity
+- actions.CheckCusine
+- actions.CheckPrices
+- actions.CheckLocationCusine
+- actions.CheckEmail
+- actions.SendEmail
+- actions.RestartAction
+config:
+  store_entities_as_slots: true
+entities:
+- location
+- cuisine
+- price
+- email
+- results
+intents:
+- greet
+- affirm
+- deny
+- goodbye
+- thankyou
+- restaurant_search
+- inform
+- chitchat
+- option
+- stop
+slots:
+  cuisine:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  email:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  price:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  results:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_continue:
+  - text: Do you wish to continue?
+  utter_ask_cuisine:
+  - buttons:
+    - payload: Chinese
+      title: Chinese
+    - payload: Mexican
+      title: Mexican
+    - payload: Italian
+      title: Italian
+    - payload: Italian
+      title: American
+    - payload: South Indian
+      title: South Indian
+    - payload: North Indian
+      title: North Indian
+    text: What kind of cuisine would you like?
+  utter_ask_email:
+  - text: Please provide your email address
+  utter_ask_location:
+  - text: In which city are you looking for restaurants
+  utter_ask_price:
+  - buttons:
+    - payload: Lesser than Rs. 300
+      title: Lesser than Rs. 300
+    - payload: Rs. 300 to 700
+      title: Rs. 300 to 700
+    - payload: More than 700
+      title: More than 700
+    text: What price range are you looking at?
+  utter_ask_service:
+  - text: Do you want to enquire about restaurants?
+  utter_bonappetitmail:
+  - text: Sent.Bon Appetit!
+  utter_bonappetitnomail:
+  - text: Okay.Bon Appetit!
+  utter_chitchat:
+  - text: I am not able to find the information you are looking for
+  utter_cuisine_not_avilable:
+  - text: Cuisine not available. Select from the available ones
+  utter_default:
+  - text: default message
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: Hi, How can I help you!
+  utter_location_double_check:
+  - text: Can you confirm the location again please
+  utter_location_not_served:
+  - text: We do not operate in that area yet.Do you like to search for another location?
+  utter_noresults:
+  - text: No results found based on cuisine and price.You can change cuisine and price
+      to see available options
+  utter_price_not_in_range:
+  - text: Select from the available prices
+  utter_require_email:
+  - text: Do you wish to get the details of restaurants over email?
+  utter_usetext:
+  - text: Please provide the input in text

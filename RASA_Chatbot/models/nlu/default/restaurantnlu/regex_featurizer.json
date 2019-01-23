@@ -1,0 +1,26 @@
+[
+    {
+        "name": "city_endings",
+        "pattern": "[A-z]+(pur|nagar|garh|uru|ore|ode|ai|si|abad|puram|patnam|mundry|vati|hati|ra|wada|wad|nada|nad|na|kot|am|halli|puri|pura|ur|uri|ganj|giri|gram)$"
+    },
+    {
+        "name": "cuisine_style",
+        "pattern": "[A-z]+(ish|ese|an)$"
+    },
+    {
+        "name": "email",
+        "pattern": "[A-z0-9]+@[A-z]+[.][A-z]+[.]?[A-z]*"
+    },
+    {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+    },
+    {
+        "name": "option",
+        "pattern": "[0-9]"
+    },
+    {
+        "name": "price",
+        "pattern": ".*[0-9]{3}.*([0-9]{3})?"
+    }
+]
