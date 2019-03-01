@@ -1,0 +1,4 @@
+
+Data set used is CXR data set - https://www.kaggle.com/nih-chest-xrays
+
+For the purpose of this demonstration, I'll be working with two classes - 'effusion' and 'nofinding'. I have collected these images in this zip file link: https://drive.google.com/file/d/1f4PX0sS2xasRKDXbtXnPW060Eb1Kfd2t/view
